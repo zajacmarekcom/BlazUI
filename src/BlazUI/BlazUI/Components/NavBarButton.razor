@@ -18,11 +18,9 @@
     [Parameter]
     public string Classes { get; set; }
     [Parameter]
-    public Color Color { get; set; } = Color.None;
+    public Color Color { get; set; } = Color.Primary;
     [Parameter]
-    public bool Block { get; set; } = false;
-    [Parameter]
-    public Size Size { get; set; } = Size.Default;
+    public bool Inverted { get; set; } = false;
 
     private string GetButtonType()
     {
@@ -31,7 +29,8 @@
 
     private string GetClasses()
     {
-        var blockClass = Block ? "btn-block" : "";
-        return $"btn btn-{Size.ToString().ToLower()} btn-{Color.ToString().ToLower()} {blockClass} {Classes}";
+        var color = $"navbar-link-{ Color.ToString().ToLower()}";
+        color = Inverted ? $"{color}-inverted" : color;
+        return $"link navbar-link navbar-link-button {color} {Classes}";
     }
 }

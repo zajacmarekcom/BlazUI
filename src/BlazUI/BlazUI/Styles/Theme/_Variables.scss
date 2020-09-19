@@ -9,12 +9,13 @@ $success: #54F773;
 $none: $background;
 
 $text: #000000;
+$gray-text: lighten($text, 25%);
 $light-text: $background;
 
 $primary-text: $light-text;
-$secondary-text: lighten($text, 25%);
+$secondary-text: $gray-text;
 $warning-text: $text;
 $danger-text: $light-text;
 $info-text: $light-text;
-$success-text: lighten($text, 25%);
-$none-text: lighten($text, 25%);
+$success-text: $gray-text;
+$none-text: $gray-text;

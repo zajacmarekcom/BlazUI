@@ -1,1 +1,91 @@
-﻿
+﻿.navbar {
+    background-color: $secondary;
+    color: $gray-text;
+    display: block;
+    width: 100%;
+    border: 0;
+    position: fixed;
+    top: 0;
+
+    &-default {
+        height: 4em;
+
+        & > * {
+            font-size: 100%;
+        }
+
+        & .navbar-link {
+            padding: 1.45rem;
+        }
+    }
+
+    &-small {
+        height: 2.5em;
+
+        & > * {
+            font-size: 75%;
+        }
+
+        & .navbar-link {
+            padding: 0.9rem;
+        }
+    }
+
+    &-large {
+        height: 6em;
+
+        & > * {
+            font-size: 140%;
+        }
+
+        & .navbar-link {
+            padding: 2.5rem;
+        }
+    }
+
+    &-link {
+        display: inline-block;
+        height: 100%;
+        box-sizing: border-box;
+
+        &-button {
+            display: inline-block;
+            border-width: 0;
+
+            &:disabled {
+                opacity: 0.3;
+            }
+        }
+
+        &-primary {
+            color: $primary;
+            background-color: $secondary;
+
+            &:hover {
+                color: $secondary;
+                background-color: $primary;
+            }
+        }
+
+        &-primary-inverted {
+            color: $secondary;
+            background-color: $primary;
+
+            &:hover {
+                color: $primary;
+                background-color: $secondary;
+            }
+        }
+    }
+
+    &-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+
+        &-block {
+            display: inline-block;
+        }
+    }
+}

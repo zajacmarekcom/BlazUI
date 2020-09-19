@@ -1,5 +1,20 @@
-﻿<h3>NavBar</h3>
+﻿@using BlazUI.Enums
+
+<CascadingValue Value="this">
+    <nav class="@GetClasses()">
+        @ChildContent
+    </nav>
+</CascadingValue>
 
 @code {
+    [Parameter]
+    public Size Size { get; set; } = Size.Default;
+    public string Classes { get; set; } = string.Empty;
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
 
+    private string GetClasses()
+    {
+        return $"navbar navbar-{Size.ToString().ToLower()} {Classes}";
+    }
 }

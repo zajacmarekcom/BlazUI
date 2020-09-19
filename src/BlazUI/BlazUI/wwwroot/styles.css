@@ -180,4 +180,87 @@ p {
   opacity: 0.3;
 }
 
+a {
+  text-decoration: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.navbar {
+  background-color: #E3E3E3;
+  color: #404040;
+  display: block;
+  width: 100%;
+  border: 0;
+  position: fixed;
+  top: 0;
+}
+.navbar-default {
+  height: 4em;
+}
+.navbar-default > * {
+  font-size: 100%;
+}
+.navbar-default .navbar-link {
+  padding: 1.45rem;
+}
+.navbar-small {
+  height: 2.5em;
+}
+.navbar-small > * {
+  font-size: 75%;
+}
+.navbar-small .navbar-link {
+  padding: 0.9rem;
+}
+.navbar-large {
+  height: 6em;
+}
+.navbar-large > * {
+  font-size: 140%;
+}
+.navbar-large .navbar-link {
+  padding: 2.5rem;
+}
+.navbar-link {
+  display: inline-block;
+  height: 100%;
+  box-sizing: border-box;
+}
+.navbar-link-button {
+  display: inline-block;
+  border-width: 0;
+}
+.navbar-link-button:disabled {
+  opacity: 0.3;
+}
+.navbar-link-primary {
+  color: #C60021;
+  background-color: #E3E3E3;
+}
+.navbar-link-primary:hover {
+  color: #E3E3E3;
+  background-color: #C60021;
+}
+.navbar-link-primary-inverted {
+  color: #E3E3E3;
+  background-color: #C60021;
+}
+.navbar-link-primary-inverted:hover {
+  color: #C60021;
+  background-color: #E3E3E3;
+}
+.navbar-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.navbar-menu-block {
+  display: inline-block;
+}
+
 /*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,26 @@
+﻿@using BlazUI.Enums 
+
+<a href="@Href" class="@GetClasses()">
+    @ChildContent
+</a>
+
+@code {
+    [Parameter]
+    public string Href { get; set; }
+    [Parameter]
+    public Color Color { get; set; } = Color.Primary;
+    [Parameter]
+    public string Classes { get; set; } = string.Empty;
+    [Parameter]
+    public bool Inverted { get; set; } = false;
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    private string GetClasses()
+    {
+        var color = $"navbar-link-{ Color.ToString().ToLower()}";
+        color = Inverted ? $"{color}-inverted" : color;
+        return $"link navbar-link {color} {Classes}";
+    }
+}
