@@ -81,8 +81,7 @@ body {
 }
 
 p {
-  padding: 2rem;
-  margin: 1rem;
+  padding: 1rem;
 }
 
 .btn {
@@ -90,7 +89,7 @@ p {
   border-width: 1px;
   border-style: solid;
   opacity: 1;
-  font-weight: bold;
+  font-weight: normal;
   transition: 0.3s;
 }
 .btn:hover {
@@ -136,13 +135,21 @@ p {
 .btn-info * {
   color: #F6F6F8;
 }
+.btn-success {
+  background-color: #54F773;
+  color: #404040;
+  border-color: #54F773;
+}
+.btn-success * {
+  color: #404040;
+}
 .btn-none {
   background-color: #F6F6F8;
-  color: #333333;
-  border-color: #333333;
+  color: #404040;
+  border-color: #404040;
 }
 .btn-none * {
-  color: #333333;
+  color: #404040;
 }
 .btn-small {
   font-size: 75%;

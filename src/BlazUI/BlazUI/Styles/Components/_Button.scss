@@ -3,7 +3,7 @@
     border-width: 1px;
     border-style: solid;
     opacity: 1;
-    font-weight: bold;
+    font-weight: normal;
     transition: 0.3s;
 
     &:hover {
@@ -57,6 +57,16 @@
 
         & * {
             color: $info-text;
+        }
+    }
+
+    &-success {
+        background-color: $success;
+        color: $success-text;
+        border-color: $success;
+
+        & * {
+            color: $success-text;
         }
     }
 

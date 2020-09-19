@@ -6,6 +6,7 @@
         Secondary,
         Warning,
         Danger,
+        Success,
         Info,
         None
     }

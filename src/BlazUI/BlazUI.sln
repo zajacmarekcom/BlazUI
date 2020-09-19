@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazUI", "BlazUI\BlazUI.csproj", "{625F3AD2-F313-495F-90EF-3C4B115F6953}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazUI", "BlazUI\BlazUI.csproj", "{625F3AD2-F313-495F-90EF-3C4B115F6953}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazUI.Samples.Overview", "..\..\samples\BlazUI.Samples\BlazUI.Samples.Overview\BlazUI.Samples.Overview.csproj", "{97712C09-EB02-4A72-9240-995A7D01FF13}"
 EndProject

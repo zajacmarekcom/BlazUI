@@ -5,6 +5,7 @@ $secondary: #E3E3E3;
 $warning: #F7DB86;
 $danger: #F76D84;
 $info: #607BF7;
+$success: #54F773;
 $none: $background;
 
 $text: #000000;
@@ -15,4 +16,5 @@ $secondary-text: lighten($text, 25%);
 $warning-text: $text;
 $danger-text: $light-text;
 $info-text: $light-text;
-$none-text: lighten($text, 20%);
+$success-text: lighten($text, 25%);
+$none-text: lighten($text, 25%);
