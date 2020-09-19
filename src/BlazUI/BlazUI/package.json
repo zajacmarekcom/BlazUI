@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "name": "asp.net",
+  "scripts": {
+    "build": "sass ./Styles/Core.scss ./wwwroot/styles.css"
+  },
+  "private": true,
+  "devDependencies": {
+    "sass": "^1.26.11"
+  }
+}

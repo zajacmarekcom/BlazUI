@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazUI", "BlazUI\BlazUI.csproj", "{625F3AD2-F313-495F-90EF-3C4B115F6953}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazUI.Samples.Overview", "..\..\samples\BlazUI.Samples\BlazUI.Samples.Overview\BlazUI.Samples.Overview.csproj", "{97712C09-EB02-4A72-9240-995A7D01FF13}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{625F3AD2-F313-495F-90EF-3C4B115F6953}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{625F3AD2-F313-495F-90EF-3C4B115F6953}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{625F3AD2-F313-495F-90EF-3C4B115F6953}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{625F3AD2-F313-495F-90EF-3C4B115F6953}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97712C09-EB02-4A72-9240-995A7D01FF13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97712C09-EB02-4A72-9240-995A7D01FF13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97712C09-EB02-4A72-9240-995A7D01FF13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97712C09-EB02-4A72-9240-995A7D01FF13}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {390B1FCA-788B-425B-8D50-2E0D90F80D57}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,72 @@
+﻿.btn {
+    display: inline-block;
+    border-width: 1px;
+    border-style: solid;
+    opacity: 1;
+    font-weight: bold;
+    transition: 0.3s;
+
+    &:hover {
+        opacity: 0.6;
+    }
+
+    &-primary {
+        background-color: $primary;
+        color: $primary-text;
+        border-color: $primary;
+    }
+
+    &-secondary {
+        background-color: $secondary;
+        color: $secondary-text;
+        border-color: $secondary;
+    }
+
+    &-warning {
+        background-color: $warning;
+        color: $warning-text;
+        border-color: $warning;
+    }
+
+    &-danger {
+        background-color: $danger;
+        color: $danger-text;
+        border-color: $danger;
+    }
+
+    &-info {
+        background-color: $info;
+        color: $info-text;
+        border-color: $info;
+    }
+
+    &-none {
+        background-color: $none;
+        color: $none-text;
+        border-color: $none--text;
+    }
+
+    &-small {
+        font-size: 75%;
+        padding: 0.2rem 0.3rem;
+    }
+
+    &-default {
+        font-size: 100%;
+        padding: 0.4rem 0.6rem;
+    }
+
+    &-large {
+        font-size: 140%;
+        padding: 0.6rem 1rem;
+    }
+
+    &-block {
+        display: block;
+        width: 100%;
+    }
+
+    &:disabled {
+        opacity: 0.3;
+    }
+}
