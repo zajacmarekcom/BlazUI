@@ -22,6 +22,7 @@ time, mark, audio, video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  box-sizing: border-box;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -197,6 +198,7 @@ a:hover {
   border: 0;
   position: fixed;
   top: 0;
+  z-index: 10;
 }
 .navbar-default {
   height: 4em;
@@ -261,6 +263,62 @@ a:hover {
 }
 .navbar-menu-block {
   display: inline-block;
+}
+
+.modal {
+  position: absolute;
+  background-color: #F6F6F8;
+  z-index: 2001;
+  box-shadow: 5px 5px 3px rgba(3, 3, 3, 0.4);
+  transition: opacity 0.4s;
+}
+.modal-default {
+  width: 50vw;
+  left: calc((100vw - 50vw) / 2);
+}
+.modal-small {
+  width: 30vw;
+  left: calc((100vw - 30vw) / 2);
+}
+.modal-large {
+  width: 70vw;
+  left: calc((100vw - 70vw) / 2);
+}
+.modal:not(.visible) {
+  display: none;
+  opacity: 0;
+}
+.modal.visible {
+  display: block;
+  opacity: 1;
+}
+.modal-title {
+  display: flex;
+  width: 100%;
+  padding: 0.5rem;
+  justify-content: space-between;
+}
+.modal-title h2 {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+.modal-overlay {
+  z-index: 2000;
+  background-color: #E3E3E3;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: opacity 0.4s ease-in;
+}
+.modal-overlay:not(.visible) {
+  display: none;
+  opacity: 0;
+}
+.modal-overlay.visible {
+  display: block;
+  opacity: 0.5;
 }
 
 /*# sourceMappingURL=styles.css.map */

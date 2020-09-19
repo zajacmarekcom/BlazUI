@@ -3,7 +3,7 @@
     <NavBarMenu>
         <NavBarMenuBlock>
             <NavBarLink Href="#">Test link</NavBarLink>
-            <NavBarButton Inverted="true">Test button</NavBarButton>
+            <NavBarButton Inverted="true" Clicked="OpenModal">Test button</NavBarButton>
         </NavBarMenuBlock>
         <NavBarMenuBlock>
             <NavBarLink Href="#">Test link</NavBarLink>
@@ -27,6 +27,8 @@
 <Button Block="true">Block button</Button>
 <Button Disabled="true" Color="Color.Primary">Disabled</Button>
 <Button Disabled="true" Color="Color.Secondary">Disabled</Button>
+
+<Modal @ref="ModalRef" Height="50" TiTle="Test modal title"></Modal>
 
 <p>
     orem ipsum dolor sit amet, consectetur adipiscing elit. Praesent suscipit rutrum mi nec dictum. Vivamus ac pulvinar turpis, non scelerisque eros. Sed vitae velit in nulla aliquam euismod laoreet a dolor. Morbi sollicitudin, mauris nec interdum vulputate, dolor purus condimentum magna, non tempor lorem nunc sit amet leo. Proin vulputate nisi et sagittis condimentum. Donec eu velit mollis, aliquam leo et, viverra diam. Suspendisse rhoncus vehicula tempus. Sed ullamcorper vitae est ullamcorper porttitor. Duis ac dolor porta, eleifend ligula ut, consectetur turpis. Phasellus nisl dolor, semper sed dignissim eleifend, ornare ac arcu. In hac habitasse platea dictumst. Etiam elementum erat dui, eu pellentesque velit facilisis vel.
@@ -85,3 +87,13 @@
 <p>
     Vivamus mollis mauris sapien, non viverra ex facilisis ut. Curabitur malesuada blandit nulla, eu tristique est accumsan id. Praesent non metus ligula. Nulla facilisi. Nullam sit amet sapien imperdiet, ullamcorper turpis a, dictum nisl. Proin mattis, leo id faucibus auctor, neque eros pellentesque dui, et efficitur magna tellus ut erat. Sed nec ante et ante rutrum eleifend non in eros. Phasellus interdum placerat massa et tempus.
 </p>
+
+@code
+{
+    private Modal ModalRef { get; set; }
+
+    private void OpenModal()
+    {
+        ModalRef.Show();
+    }
+}

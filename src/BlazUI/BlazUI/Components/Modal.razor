@@ -1,0 +1,59 @@
+﻿@using BlazUI.Enums
+
+<div class="@GetClasses()" style="@GetStyles()">
+    <div class="modal-title">
+        <h2>@Title</h2>
+        <Button Color="Color.None" Clicked="Hide">
+            <i class="icofont-close"></i>
+        </Button>
+    </div>
+</div>
+<div class="modal-overlay @(Visible ? "visible" : "")"></div>
+
+@code {
+    [Parameter]
+    public string Title { get; set; }
+    [Parameter]
+    public Size Size { get; set; } = Size.Default;
+    [Parameter]
+    public int Height { get; set; } = 0;
+    [Parameter]
+    public EventCallback ModalClosed { get; set; }
+    [Parameter]
+    public EventCallback ModalOpened { get; set; }
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    private bool Visible { get; set; }
+
+    public void Show()
+    {
+        Visible = true;
+        StateHasChanged();
+        if (ModalOpened.HasDelegate)
+        {
+            ModalOpened.InvokeAsync(null);
+        }
+    }
+
+    public void Hide()
+    {
+        Visible = false;
+        StateHasChanged();
+        if (ModalClosed.HasDelegate)
+        {
+            ModalClosed.InvokeAsync(null);
+        }
+    }
+
+    private string GetStyles()
+    {
+        return Height > 0 ? $"height: {Height}vh; top: calc((100vh - {Height}vh) / 2 + 1em" : "1em";
+    }
+
+    private string GetClasses()
+    {
+        var visible = Visible ? "visible" : "";
+        return $"modal modal-{Size.ToString().ToLower()} {visible}";
+    }
+}
