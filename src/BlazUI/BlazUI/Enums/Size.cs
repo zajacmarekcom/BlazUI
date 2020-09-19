@@ -1,6 +1,6 @@
 ﻿namespace BlazUI.Enums
 {
-    public enum ButtonSize
+    public enum Size
     {
         Small,
         Default,

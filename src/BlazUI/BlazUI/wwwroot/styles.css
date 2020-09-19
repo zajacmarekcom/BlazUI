@@ -80,6 +80,11 @@ body {
   font-weight: lighter;
 }
 
+p {
+  padding: 2rem;
+  margin: 1rem;
+}
+
 .btn {
   display: inline-block;
   border-width: 1px;
@@ -96,42 +101,69 @@ body {
   color: #F6F6F8;
   border-color: #C60021;
 }
+.btn-primary * {
+  color: #F6F6F8;
+}
 .btn-secondary {
   background-color: #E3E3E3;
   color: #404040;
   border-color: #E3E3E3;
+}
+.btn-secondary * {
+  color: #404040;
 }
 .btn-warning {
   background-color: #F7DB86;
   color: #000000;
   border-color: #F7DB86;
 }
+.btn-warning * {
+  color: #000000;
+}
 .btn-danger {
   background-color: #F76D84;
   color: #F6F6F8;
   border-color: #F76D84;
+}
+.btn-danger * {
+  color: #F6F6F8;
 }
 .btn-info {
   background-color: #607BF7;
   color: #F6F6F8;
   border-color: #607BF7;
 }
+.btn-info * {
+  color: #F6F6F8;
+}
 .btn-none {
   background-color: #F6F6F8;
-  color: #000000;
-  border-color: #F6F6F8;
+  color: #333333;
+  border-color: #333333;
+}
+.btn-none * {
+  color: #333333;
 }
 .btn-small {
   font-size: 75%;
   padding: 0.2rem 0.3rem;
 }
+.btn-small * {
+  font-size: 75%;
+}
 .btn-default {
   font-size: 100%;
   padding: 0.4rem 0.6rem;
 }
+.btn-default * {
+  font-size: 100%;
+}
 .btn-large {
   font-size: 140%;
   padding: 0.6rem 1rem;
+}
+.btn-large * {
+  font-size: 140%;
 }
 .btn-block {
   display: block;

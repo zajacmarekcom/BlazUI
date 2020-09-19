@@ -14,51 +14,87 @@
         background-color: $primary;
         color: $primary-text;
         border-color: $primary;
+
+        & * {
+            color: $primary-text;
+        }
     }
 
     &-secondary {
         background-color: $secondary;
         color: $secondary-text;
         border-color: $secondary;
+
+        & * {
+            color: $secondary-text;
+        }
     }
 
     &-warning {
         background-color: $warning;
         color: $warning-text;
         border-color: $warning;
+
+        & * {
+            color: $warning-text;
+        }
     }
 
     &-danger {
         background-color: $danger;
         color: $danger-text;
         border-color: $danger;
+
+        & * {
+            color: $danger-text;
+        }
     }
 
     &-info {
         background-color: $info;
         color: $info-text;
         border-color: $info;
+
+        & * {
+            color: $info-text;
+        }
     }
 
     &-none {
         background-color: $none;
         color: $none-text;
-        border-color: $none--text;
+        border-color: $none-text;
+
+        & * {
+            color: $none-text;
+        }
     }
 
     &-small {
         font-size: 75%;
         padding: 0.2rem 0.3rem;
+
+        & * {
+            font-size: 75%;
+        }
     }
 
     &-default {
         font-size: 100%;
         padding: 0.4rem 0.6rem;
+
+        & * {
+            font-size: 100%;
+        }
     }
 
     &-large {
         font-size: 140%;
         padding: 0.6rem 1rem;
+
+        & * {
+            font-size: 140%;
+        }
     }
 
     &-block {
