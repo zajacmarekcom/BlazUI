@@ -1,0 +1,10 @@
+﻿<ul class="list">
+    @ChildContent
+</ul>
+
+@code {
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+    [Parameter]
+    public bool Styled { get; set; } = false;
+}

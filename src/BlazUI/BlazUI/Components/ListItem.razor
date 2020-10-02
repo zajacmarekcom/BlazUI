@@ -1,0 +1,16 @@
+﻿<li class="list-item @(IsNested ? "nested" : "") @(Center ? "center" : "")">
+    <CascadingValue Value="this" TValue="ListItem">
+        @ChildContent
+    </CascadingValue>
+</li>
+
+@code {
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+    [Parameter]
+    public bool Center { get; set; } = false;
+    [CascadingParameter]
+    public ListItem ParentItem { get; set; }
+
+    public bool IsNested { get => ParentItem != null; }
+}

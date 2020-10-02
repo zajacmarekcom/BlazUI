@@ -21,8 +21,22 @@ body {
     background-color: $background;
     font-size: 16px;
     font-weight: lighter;
+    color: $text;
 }
 
 p {
     padding: 1rem;
+}
+
+a {
+    color: $gray-text;
+    text-decoration: underline;
+
+    &:hover {
+        color: $light-text;
+    }
+
+    &:active, &:visited {
+        color: $gray-text;
+    }
 }

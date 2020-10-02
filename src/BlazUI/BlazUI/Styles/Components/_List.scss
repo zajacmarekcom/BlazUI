@@ -1,0 +1,25 @@
+﻿.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.1em;
+    font-weight: 600;
+
+    &.styled {
+        list-style: circle;
+    }
+
+    &-item {
+        padding: 0.2em;
+        margin: 0;
+
+        &.center {
+            text-align: center;
+        }
+
+        &.nested {
+            padding-left: 1em;
+            font-size: 0.9em;
+        }
+    }
+}

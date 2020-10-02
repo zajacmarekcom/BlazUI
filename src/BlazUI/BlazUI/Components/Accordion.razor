@@ -1,0 +1,40 @@
+﻿@using BlazUI.Services
+
+<CascadingValue Value="this" TValue="Accordion">
+    <CascadingValue Value="Service" TValue="AccordionService">
+        <div class="accordion">
+            @ChildContent
+        </div>
+    </CascadingValue>
+</CascadingValue>
+
+@code {
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+    [Parameter]
+    public bool AlwaysOpen { get; set; }
+    [Parameter]
+    public bool SingleOpened { get; set; }
+
+    private AccordionService Service;
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        Service = new AccordionService();
+        Service.ItemOpenedHandler += HandleOpenedItem;
+
+        if (AlwaysOpen)
+        {
+            Service.OpenAll();
+        }
+    }
+
+    private void HandleOpenedItem(AccordionItem item)
+    {
+        if (SingleOpened)
+        {
+            Service.CloseAll(item);
+        }
+    }
+}

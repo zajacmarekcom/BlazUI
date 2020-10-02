@@ -1,5 +1,5 @@
 ﻿@page "/"
-<NavBar Size="Size.Small">
+<NavBar>
     <NavBarMenu>
         <NavBarMenuBlock>
             <NavBarLink Href="#">Test link</NavBarLink>
@@ -31,7 +31,57 @@
 <Modal @ref="ModalRef" Height="80" TiTle="Test modal title"></Modal>
 
 <Row>
-    <Column Size="ColumnSize.Col5" Offset="Offset.Offset2">
+    <Column Size="ColumnSize.Col3">
+        <Accordion SingleOpened="true">
+            <AccordionItem Title="Test1">
+                <List>
+                    <ListItem>
+                        <a href="#">Test link</a>
+                    </ListItem>
+                    <ListItem>
+                        <a href="#">Test link 2</a>
+                    </ListItem>
+                </List>
+            </AccordionItem>
+            <AccordionItem Title="Test2">
+                <List>
+                    <ListItem>
+                        <a href="#">Test link</a>
+                    </ListItem>
+                    <ListItem>
+                        <a href="#">Test link 2</a>
+                        <ListItem>
+                            <a href="#">Nested link 1</a>
+                        </ListItem>
+                        <ListItem>
+                            <a href="#">Nested link 2</a>
+                        </ListItem>
+                    </ListItem>
+                </List>
+            </AccordionItem>
+            <AccordionItem Title="Test3">
+                <List>
+                    <ListItem>
+                        <a href="#">Test link</a>
+                    </ListItem>
+                    <ListItem>
+                        <a href="#">Test link 2</a>
+                    </ListItem>
+                </List>
+            </AccordionItem>
+            <AccordionItem Title="Test4">
+                <List>
+                    <ListItem>
+                        <a href="#">Test link</a>
+                    </ListItem>
+                    <ListItem>
+                        <a href="#">Test link 2</a>
+                    </ListItem>
+                </List>
+            </AccordionItem>
+        </Accordion>
+    </Column>
+    <Column Size="ColumnSize.Col5">
         <p>
             orem ipsum dolor sit amet, consectetur adipiscing elit. Praesent suscipit rutrum mi nec dictum. Vivamus ac pulvinar turpis, non scelerisque eros. Sed vitae velit in nulla aliquam euismod laoreet a dolor. Morbi sollicitudin, mauris nec interdum vulputate, dolor purus condimentum magna, non tempor lorem nunc sit amet leo. Proin vulputate nisi et sagittis condimentum. Donec eu velit mollis, aliquam leo et, viverra diam. Suspendisse rhoncus vehicula tempus. Sed ullamcorper vitae est ullamcorper porttitor. Duis ac dolor porta, eleifend ligula ut, consectetur turpis. Phasellus nisl dolor, semper sed dignissim eleifend, ornare ac arcu. In hac habitasse platea dictumst. Etiam elementum erat dui, eu pellentesque velit facilisis vel.
         </p>

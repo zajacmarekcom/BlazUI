@@ -1,0 +1,36 @@
+﻿.accordion {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    &-item {
+        width: 100%;
+
+        &--title {
+            width: 100%;
+            padding: 0.5rem;
+            margin: 0;
+            font-size: 1.4rem;
+            cursor: pointer;
+            background-color: $secondary;
+            text-align: center;
+            border-bottom: 1px solid $dark;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+
+            & span {
+                display: inline-block;
+            }
+        }
+
+        &--content {
+            width: 100%;
+            padding: 0.2rem;
+
+            &.collapsed {
+                display: none;
+            }
+        }
+    }
+}

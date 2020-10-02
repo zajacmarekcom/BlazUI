@@ -1,0 +1,55 @@
+﻿@using BlazUI.Services
+
+<div class="accordion-item">
+    <h3 @onclick="@Toggle" class="accordion-item--title">
+        <span><i class="icofont-caret-@(Opened ? "down" : "right")"></i></span>
+        <span>@Title</span>
+    </h3>
+    <div class="accordion-item--content @(Opened ? "" : "collapsed")">
+        @ChildContent
+    </div>
+</div>
+
+@code {
+    [CascadingParameter]
+    public Accordion Parent { get; set; }
+    [CascadingParameter]
+    public AccordionService Service { get; set; }
+    [Parameter]
+    public bool Opened { get; set; } = false;
+    [Parameter]
+    public string Title { get; set; }
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    public void Open()
+    {
+        Service.Opened(this);
+        Opened = true;
+        StateHasChanged();
+    }
+
+    public void Close()
+    {
+        Opened = false;
+        StateHasChanged();
+    }
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        Service.AddChild(this);
+    }
+
+    private void Toggle()
+    {
+        if (Opened)
+        {
+            Close();
+        }
+        else
+        {
+            Open();
+        }
+    }
+}
