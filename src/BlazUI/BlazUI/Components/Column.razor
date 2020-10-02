@@ -1,0 +1,25 @@
+﻿@using BlazUI.Enums
+
+<div class="@Classes">
+    @ChildContent
+</div>
+
+@code {
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    [Parameter]
+    public ColumnSize Size { get; set; } = ColumnSize.Col12;
+
+    [Parameter]
+    public Offset Offset { get; set; } = Offset.Offset0;
+
+    private string Classes
+    {
+        get
+        {
+            var offset = Offset != Offset.Offset0 ? "offset-" + (short)Offset : "";
+            return $"col-{(short)Size} {offset}";
+        }
+    }
+}
