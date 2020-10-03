@@ -1,0 +1,21 @@
+﻿<NavBar>
+    <NavBarMenu>
+        <NavBarMenuBlock>
+
+        </NavBarMenuBlock>
+        <NavBarMenuBlock>
+            <NavBarLink Href="https://github.com/zajacmarekcom/BlazUI"><i class="icofont-github"></i>GitHub</NavBarLink>
+        </NavBarMenuBlock>
+    </NavBarMenu>
+</NavBar>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

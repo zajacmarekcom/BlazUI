@@ -1,6 +1,6 @@
 ﻿@using BlazUI.Enums
 
-<div class="@Classes">
+<div class="@Classes @(NoPadding ? "no-padding" : "")">
     @ChildContent
 </div>
 
@@ -13,6 +13,9 @@
 
     [Parameter]
     public Offset Offset { get; set; } = Offset.Offset0;
+
+    [Parameter]
+    public bool NoPadding { get; set; } = false;
 
     private string Classes
     {

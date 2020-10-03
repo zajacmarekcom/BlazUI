@@ -81,6 +81,15 @@ body {
   font-weight: lighter;
   color: #000000;
 }
+body.has-navbar--small {
+  padding-top: 2.5em;
+}
+body.has-navbar--default {
+  padding-top: 4em;
+}
+body.has-navbar--large {
+  padding-top: 6em;
+}
 
 p {
   padding: 1rem;
@@ -344,6 +353,9 @@ a:hover {
   display: inline-block;
   float: left;
   padding: 0.5rem;
+}
+.row [class*=col-].no-padding {
+  padding: 0;
 }
 .row .col-1 {
   width: calc(100% * (1/12));

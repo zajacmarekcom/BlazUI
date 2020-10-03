@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazUI", "BlazUI\BlazUI.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazUI.Samples.Overview", "..\..\samples\BlazUI.Samples\BlazUI.Samples.Overview\BlazUI.Samples.Overview.csproj", "{97712C09-EB02-4A72-9240-995A7D01FF13}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazUI.Website", "..\..\docs\BlazUI.Website\BlazUI.Website.csproj", "{4C058AB0-B524-4A3E-BA24-E83F1B1D9FA9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{97712C09-EB02-4A72-9240-995A7D01FF13}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97712C09-EB02-4A72-9240-995A7D01FF13}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97712C09-EB02-4A72-9240-995A7D01FF13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C058AB0-B524-4A3E-BA24-E83F1B1D9FA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C058AB0-B524-4A3E-BA24-E83F1B1D9FA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C058AB0-B524-4A3E-BA24-E83F1B1D9FA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C058AB0-B524-4A3E-BA24-E83F1B1D9FA9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
