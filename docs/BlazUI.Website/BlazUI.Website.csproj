@@ -16,4 +16,10 @@
     <ProjectReference Include="..\..\src\BlazUI\BlazUI\BlazUI.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="wwwroot\img\logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>

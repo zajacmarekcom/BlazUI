@@ -21,13 +21,8 @@
     protected override void OnInitialized()
     {
         base.OnInitialized();
-        Service = new AccordionService();
+        Service = new AccordionService(AlwaysOpen);
         Service.ItemOpenedHandler += HandleOpenedItem;
-
-        if (AlwaysOpen)
-        {
-            Service.OpenAll();
-        }
     }
 
     private void HandleOpenedItem(AccordionItem item)

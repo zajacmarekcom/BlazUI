@@ -95,6 +95,16 @@ p {
   padding: 1rem;
 }
 
+pre.code {
+  font-family: monospace;
+  font-size: 0.9rem;
+  background-color: #E3E3E3;
+  padding: 1rem;
+  page-break-inside: avoid;
+  overflow: auto;
+  word-break: break-word;
+}
+
 a {
   color: #404040;
   text-decoration: underline;
@@ -281,9 +291,11 @@ a:hover {
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+  height: 100%;
 }
 .navbar-menu-block {
   display: inline-block;
+  height: 100%;
 }
 
 .modal {
@@ -347,7 +359,7 @@ a:hover {
   width: 100%;
   box-sizing: border-box;
   padding: 0;
-  margin: 0.5rem;
+  margin: 0;
 }
 .row [class*=col-] {
   display: inline-block;
@@ -470,7 +482,7 @@ a:hover {
   list-style: circle;
 }
 .list-item {
-  padding: 0.2em;
+  padding: 0.4rem 0.4rem 0.4rem 1.5rem;
   margin: 0;
 }
 .list-item.center {
