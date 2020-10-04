@@ -62,6 +62,10 @@
             color: $primary;
             background-color: $secondary;
 
+            & * {
+                color: $primary;
+            }
+
             &:hover {
                 color: $secondary;
                 background-color: $primary;
@@ -71,6 +75,10 @@
         &-primary-inverted {
             color: $secondary;
             background-color: $primary;
+
+            & * {
+                color: $secondary;
+            }
 
             &:hover {
                 color: $primary;

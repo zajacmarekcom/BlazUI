@@ -100,6 +100,7 @@ pre.code {
   font-size: 0.9rem;
   background-color: #E3E3E3;
   padding: 1rem;
+  margin: 1rem;
   page-break-inside: avoid;
   overflow: auto;
   word-break: break-word;
@@ -114,6 +115,33 @@ a:hover {
 }
 a:active, a:visited {
   color: #404040;
+}
+
+h1 {
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.7rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .btn {
@@ -274,6 +302,9 @@ a:hover {
   color: #C60021;
   background-color: #E3E3E3;
 }
+.navbar-link-primary * {
+  color: #C60021;
+}
 .navbar-link-primary:hover {
   color: #E3E3E3;
   background-color: #C60021;
@@ -281,6 +312,9 @@ a:hover {
 .navbar-link-primary-inverted {
   color: #E3E3E3;
   background-color: #C60021;
+}
+.navbar-link-primary-inverted * {
+  color: #E3E3E3;
 }
 .navbar-link-primary-inverted:hover {
   color: #C60021;
@@ -364,7 +398,7 @@ a:hover {
 .row [class*=col-] {
   display: inline-block;
   float: left;
-  padding: 0.5rem;
+  padding: 1.5rem;
 }
 .row [class*=col-].no-padding {
   padding: 0;
@@ -491,6 +525,37 @@ a:hover {
 .list-item.nested {
   padding-left: 1em;
   font-size: 0.9em;
+}
+
+.hero {
+  width: 100%;
+  margin: 0;
+  padding: 3rem;
+  background-color: #E3E3E3;
+}
+.hero--title {
+  font-size: 4.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 3rem;
+}
+.hero--subtitle {
+  font-size: 2.5rem;
+  font-weight: normal;
+  text-align: center;
+  margin: 2rem;
+}
+.hero--link {
+  color: #F6F6F8;
+  padding: 2rem;
+  margin: 2rem;
+}
+.hero--link-container {
+  width: 100%;
+  text-align: center;
+}
+.hero--link:active, .hero--link:visited, .hero--link:hover {
+  color: #F6F6F8;
 }
 
 /*# sourceMappingURL=styles.css.map */

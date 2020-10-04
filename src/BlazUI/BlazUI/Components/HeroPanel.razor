@@ -1,0 +1,21 @@
+﻿<div class="hero">
+    <h1 class="hero--title">@Title</h1>
+    @if(!string.IsNullOrEmpty(SubTitle))
+    {
+        <h2 class="hero--subtitle">@SubTitle</h2>
+    }
+    <div class="hero--link-container">
+        <a class="hero--link btn btn-primary btn-large" href="@LinkUrl">@LinkText</a>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public string Title { get; set; }
+    [Parameter]
+    public string SubTitle { get; set; }
+    [Parameter]
+    public string LinkUrl { get; set; }
+    [Parameter]
+    public string LinkText { get; set; }
+}
