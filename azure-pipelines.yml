@@ -2,7 +2,7 @@
 # Build and test ASP.NET Core projects targeting .NET Core.
 # Add steps that run tests, create a NuGet package, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
-name: $(GitVersion.NuGetVersion)
+name: $(GitVersion.SemVer)
 
 trigger:
 - master
@@ -12,7 +12,7 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
-  GitVersion.NuGetVersion: ''
+  GitVersion.SemVer: ''
 steps: 
 - task: Npm@1
   displayName: 'npm install'
@@ -34,7 +34,7 @@ steps:
   displayName: 'dotnet build' 
   inputs: 
     projects: '**/BlazUI.csproj' 
-    arguments: '--configuration $(BuildConfiguration) /p:Version=$(GitVersion.NuGetVersion)' 
+    arguments: '--configuration $(BuildConfiguration) /p:Version=$(GitVersion.SemVer)' 
     versioningScheme: byBuildNumber
  
 - task: DotNetCoreCLI@2
@@ -44,7 +44,7 @@ steps:
     packagesToPack: '**/BlazUI.csproj' 
     nobuild: true 
     versioningScheme: byEnvVar 
-    versionEnvVar: GitVersion.NuGetVersion
+    versionEnvVar: GitVersion.SemVer
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact'
   inputs:
