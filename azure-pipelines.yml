@@ -19,7 +19,7 @@ steps:
   inputs:
     workingDir: src/BlazUI/BlazUI
     verbose: false
-- task: UseGitVersion@5
+- task: GitVersion@5
   displayName: GitVersion 
   inputs: 
     preferBundledVersion: false
