@@ -43,3 +43,8 @@ steps:
     nobuild: true 
     versioningScheme: byEnvVar 
     versionEnvVar: GitVersion.NuGetVersion
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact'
+  inputs:
+    PathtoPublish: '$(build.artifactstagingdirectory)'
+  condition: succeededOrFailed()
