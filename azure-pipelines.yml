@@ -11,6 +11,7 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
+  GitVersion.NuGetVersion: ''
 steps: 
 - task: Npm@1
   displayName: 'npm install'
