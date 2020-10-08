@@ -12,18 +12,21 @@ pool:
 variables:
   buildConfiguration: 'Release'
 steps: 
-- task: GitVersion@5
+- task: Npm@1
+  displayName: 'npm install'
+  inputs:
+    workingDir: src/BlazUI/BlazUI
+    verbose: false
+- task: gittools.gitversion.gitversion-task.GitVersion@5
   displayName: GitVersion 
   inputs: 
     preferBundledVersion: false
  
 - task: DotNetCoreCLI@2
-  displayName: 'dotnet restore from feed' 
-  inputs: 
-    command: restore 
-    projects: '$(Parameters.projects)'
-    includeNuGetOrg: true 
-    versioningScheme: byBuildNumber
+  displayName: Restore
+  inputs:
+    command: restore
+    projects: '**/BlazUI.csproj'
  
 - task: DotNetCoreCLI@2
   displayName: 'dotnet build' 
