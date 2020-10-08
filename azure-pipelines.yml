@@ -1,0 +1,42 @@
+# ASP.NET Core
+# Build and test ASP.NET Core projects targeting .NET Core.
+# Add steps that run tests, create a NuGet package, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  buildConfiguration: 'Release'
+
+- task: gittools.gitversion.gitversion-task.GitVersion@4
+  displayName: GitVersion 
+  inputs: 
+    preferBundledVersion: false
+ 
+- task: DotNetCoreCLI@2 
+  displayName: 'dotnet restore from feed' 
+  inputs: 
+    command: restore 
+    projects: '$(Parameters.projects)'
+    includeNuGetOrg: true 
+    versioningScheme: byBuildNumber
+ 
+- task: DotNetCoreCLI@2 
+  displayName: 'dotnet build' 
+  inputs: 
+    projects: '**/BlazUI.csproj' 
+    arguments: '--configuration $(BuildConfiguration) /p:Version=$(GitVersion.NuGetVersion)' 
+    versioningScheme: byBuildNumber
+ 
+- task: DotNetCoreCLI@2
+  displayName: 'dotnet pack' 
+  inputs: 
+    command: pack
+    packagesToPack: '**/BlazUI.csproj' 
+    nobuild: true 
+    versioningScheme: byEnvVar 
+    versionEnvVar: GitVersion.NuGetVersion
