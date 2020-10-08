@@ -12,12 +12,12 @@ pool:
 variables:
   buildConfiguration: 'Release'
 steps: 
-- task: gittools.gitversion.gitversion-task.GitVersion@4
+- task: gittools.gitversion.gitversion-task.GitVersion
   displayName: GitVersion 
   inputs: 
     preferBundledVersion: false
  
-- task: DotNetCoreCLI@2 
+- task: DotNetCoreCLI@2
   displayName: 'dotnet restore from feed' 
   inputs: 
     command: restore 
@@ -25,7 +25,7 @@ steps:
     includeNuGetOrg: true 
     versioningScheme: byBuildNumber
  
-- task: DotNetCoreCLI@2 
+- task: DotNetCoreCLI@2
   displayName: 'dotnet build' 
   inputs: 
     projects: '**/BlazUI.csproj' 
