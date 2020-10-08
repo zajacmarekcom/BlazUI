@@ -12,7 +12,7 @@ pool:
 variables:
   buildConfiguration: 'Release'
 steps: 
-- task: gittools.gitversion.gitversion-task.GitVersion
+- task: GitVersion@5
   displayName: GitVersion 
   inputs: 
     preferBundledVersion: false
