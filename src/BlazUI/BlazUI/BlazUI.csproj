@@ -8,9 +8,10 @@
     <Authors>Marek Zajac</Authors>
     <Company></Company>
     <Copyright />
-    <PackageLicenseExpression></PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/zajacmarek.com/BlazUI</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/zajacmarek.com/BlazUI</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/zajacmarekcom/BlazUI</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/zajacmarekcom/BlazUI</RepositoryUrl>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <ItemGroup>
